@@ -38,8 +38,8 @@ document.getElementById("downloadAFrogBtn").addEventListener("click", async () =
     link.click();
     document.body.removeChild(link);
 
-    URL.revokeObjectURL(blobUrl);
-
+    URL.revokeObjectURL(blobUrl); 
+    //88
   } catch (err) {
     console.error(err);
     alert("Error fetching images.");
