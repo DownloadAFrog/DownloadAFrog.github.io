@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -28,20 +28,50 @@
 
   <style>
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
+      background-color: #272822;
+      color: #F8F8F2;
+      font-family: 'Fira Code', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      margin: 0;
     }
+
+    h4 {
+      color: #A6E22E; /* function green */
+    }
+
+    p {
+      color: #75715E; /* comment color */
+    }
+
     img {
         max-width: 80%;
         max-height: 60vh;
         margin-bottom: 20px;
     }
-    button {
-        margin-top: 10px;
+    
+    .button-primary {
+      background-color: #F92672;  /* keyword pink */
+      border-color: #F92672;
+      color: #F8F8F2;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary:hover {
+      background-color: #66D9EF;  /* accent cyan */
+      border-color: #66D9EF;
+      color: #272822;
+    }
+
+    .button-primary:active {
+      background-color: #E6DB74;  /* string yellow */
+      border-color: #E6DB74;
+      color: #272822;
     }
   </style>
 
@@ -52,7 +82,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
+      <div style="margin-top: 25%">
         <h4>Download A Frog!</h4>
         <p><img src="images/main.png" alt="Main Image" id="mainImage"></p>
         <p><button id="downloadAFrogBtn" class="button-primary">Frog Summoning: Download</button></p>
@@ -60,7 +90,7 @@
     </div>
   </div>
 
-  <script src="download.js"></script>
+  <script src="js/download.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
