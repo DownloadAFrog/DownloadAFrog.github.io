@@ -26,12 +26,19 @@ document.getElementById("downloadAFrogBtn").addEventListener("click", async () =
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     // Trigger download
+    const imageResponse = await fetch(randomImage.download_url);
+    const blob = await imageResponse.blob();
+
+    const blobUrl = URL.createObjectURL(blob);
+
     const link = document.createElement("a");
-    link.href = randomImage.download_url;
+    link.href = blobUrl;
     link.download = randomImage.name;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    URL.revokeObjectURL(blobUrl);
 
   } catch (err) {
     console.error(err);
