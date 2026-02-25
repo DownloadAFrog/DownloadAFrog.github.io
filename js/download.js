@@ -6,7 +6,7 @@ const branch = "main";   // branch name
 
 const apiURL = `https://api.github.com/repos/${username}/${repo}/contents/${folder}?ref=${branch}`;
 
-document.getElementById("downloadBtn").addEventListener("click", async () => {
+document.getElementById("downloadAFrogBtn").addEventListener("click", async () => {
   try {
     const response = await fetch(apiURL);
     const files = await response.json();
