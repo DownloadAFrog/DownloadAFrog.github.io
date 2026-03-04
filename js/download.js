@@ -1,7 +1,7 @@
 // GitHub repo info
 const username = "DownloadAFrog";
 const repo = "DownloadAFrog.github.io";
-const folder = "images/frogs"; // folder inside repo
+const folder = "images/the-pond"; // folder inside repo
 const branch = "main";   // branch name
 
 const apiURL = `https://api.github.com/repos/${username}/${repo}/contents/${folder}?ref=${branch}`;
